@@ -20,7 +20,7 @@ psaver_o = 1;
 
 front_h = 13; // want to match the height of a linear rail MGN12C
 
-extrusion_w = extrusion + 0.1;
+extrusion_w = extrusion + 0.0;
 extrusion_slot_w = 5;
 extrusion_offset = front_h -((slide_l-extrusion_w)/2);
 echo (extrusion_offset);
@@ -28,7 +28,7 @@ echo (extrusion_offset+slide_l/2);
 
 screw_offset = 15;
 fin_w=5;
-fin_d=4;
+fin_d=5;
 
 
 $fn=60;
@@ -64,12 +64,12 @@ translate([0,extrusion_offset,slide_h/2])
     }
 
    // Screws 
-   #translate([0,3,-4]) rotate([-90,0,0])
+   #translate([0,3,0]) rotate([-90,0,0])
     for (a = [0: 1]) {
      rotate([0,0,a*180])
 		union(){
-          translate([10, 10, (slide_h-16)/2])  cylinder(r=m3_wide_radius, h=16, center=true);
-          translate([10, -10, (slide_h-16)/2])  cylinder(r=m3_wide_radius, h=16, center=true);
+          translate([10, 15, (slide_h-16)/2])  cylinder(r=m3_wide_radius, h=16, center=true);
+          translate([10, -15, (slide_h-16)/2])  cylinder(r=m3_wide_radius, h=16, center=true);
         }
     }
 
