@@ -65,8 +65,8 @@ module carriage() {
     }
     // Screws for linear slider.
     for (x = [-10, 10]) for (y = [-15, 15]) translate([x, y, thickness]) cylinder(r=m3_radius, h=30, center=true);
-    translate([10, -15,8/2+thickness ]) cylinder(r=m3_nut_radius, h=8, center=true);
-    translate([10, 15,8/2+thickness ]) cylinder(r=m3_nut_radius, h=8, center=true);
+    translate([10, -15, 8/2+thickness+4 ]) cylinder(r=m3_nut_radius, h=8, center=true);
+    translate([10, 15, 8/2+thickness+4 ]) cylinder(r=m3_nut_radius, h=8, center=true);
 
     // Screws for ball joints.
     translate([0, 0, horn_thickness/2]) rotate([0, 90, 0]) 
