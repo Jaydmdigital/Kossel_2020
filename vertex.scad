@@ -53,27 +53,27 @@ module vertex(height, idler_offset, idler_space, fin_w=5, fin_d, fins=0, fn=180)
       translate([29.5,35,(height-extrusion)/2]) rotate([0,0,60])  
         difference(){ 
           fin(54,fin_d,fin_w+1);
-          translate([-22,-1.6,0])rotate([90,45,0]) cylinder(r1=11/2*sqrt(2), r2=extrusion/2, h=5.5, $fn=4);
-          translate([22,-1.6,0])rotate([90,45,0]) cylinder(r1=11/2*sqrt(2), r2=extrusion/2, h=5.5, $fn=4);
+          translate([-22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
+          translate([22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
       }
       translate([29.5,35,-(height-extrusion)/2]) rotate([0,0,60]) 
       difference(){ 
           fin(54,fin_d,fin_w+1);
-          translate([-22,-1.6,0])rotate([90,45,0]) cylinder(r1=11/2*sqrt(2), r2=extrusion/2, h=5.5, $fn=4);
-          translate([22,-1.6,0])rotate([90,45,0]) cylinder(r1=11/2*sqrt(2), r2=extrusion/2, h=5.5, $fn=4);
+          translate([-22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
+          translate([22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
       }
       translate([-29.5,35,(height-extrusion)/2]) rotate([0,0,-60]) 
       difference(){ 
           fin(54,fin_d,fin_w+1);
-          translate([-22,-1.6,0])rotate([90,45,0]) cylinder(r1=11/2*sqrt(2), r2=extrusion/2, h=5.5, $fn=4);
-          translate([22,-1.6,0])rotate([90,45,0]) cylinder(r1=11/2*sqrt(2), r2=extrusion/2, h=5.5, $fn=4);
+          translate([-22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
+          translate([22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
       }
       
       translate([-29.5,35,-(height-extrusion)/2]) rotate([0,0,-60]) 
       difference(){ 
           fin(54,fin_d,fin_w+1);
-          translate([-22,-1.6,0])rotate([90,45,0]) cylinder(r1=11/2*sqrt(2), r2=extrusion/2, h=5.5, $fn=4);
-          translate([22,-1.6,0])rotate([90,45,0]) cylinder(r1=11/2*sqrt(2), r2=extrusion/2, h=5.5, $fn=4);
+          translate([-22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
+          translate([22,-1.6,0])rotate([90,45,0]) cylinder(r=11/2*sqrt(2), h=5.5, $fn=4);
       }
     }
     intersection() {

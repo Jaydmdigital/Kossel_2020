@@ -49,7 +49,7 @@ translate([0, 0, extrusion*2.5/2]) frame_motor();
 
 //translate([(extrusion+thickness)/2+fin_d,vertex_offset/2,fin_w/2]) rotate([0,0,-30])  cube([1,50,fin_w]);
 
-
+/*
 color("gray")rotate(-30)translate([vertex_x_offset+0.25,vertex_y_offset/2,0])
 translate([10,0,10+30])rotate([-90,0,0])
  difference(){
@@ -77,7 +77,7 @@ translate([-10,0,10])rotate([-90,0,0])
     import("./assembly/2020_1000mm.stl", convexity=10);
     translate([-12,-12,240])cube([24,24,(1000-240)+2]);
   }
-
+*/
 /*
 %rotate(-30)cube([45,vertex_offset/2,25]);
 color("gray")rotate(-30)translate([(extrusion-thickness)/2,vertex_offset/2,0])
