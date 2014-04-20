@@ -14,7 +14,7 @@ motor_frame_height = 2.5*extrusion;
 module frame_motor() {
   difference() {
     // No idler cones.
-   vertex(motor_frame_height, idler_offset=0, idler_space=100, fin_w=fin_w, fin_d=fin_d, fins=fins, fn=200);
+  vertex(motor_frame_height, idler_offset=0, idler_space=100, fin_w=fin_w, fin_d=fin_d, fins=fins, fn=200);
 
     // KOSSEL logotype.
     translate([23, -11, 0]) rotate([90, -90, 30])
@@ -31,10 +31,16 @@ module frame_motor() {
       rotate([90, 0, 0]) cylinder(r=12, h=20, center=true);
       // NEMA 17 stepper motor mounting screws.
       for (x = [-1, 1]) for (z = [-1, 1]) {
-        scale([x, 1, z]) translate([15.5, -5, (motor_frame_height)/3]) {
-          rotate([90, 0, 0]) cylinder(r=1.65, h=20, center=true);
+        scale([x, 1, z]) translate([31/2, -5, 31/2]) {
+          rotate([90, 45, 0]) cylinder(r=1.65, h=20, center=true);
+          /*{
+            cube([1.65*2,2,20],center=true);
+            translate([0,1,0])cylinder(r=1.65, h=20, center=true); 
+            translate([0,-1,0])cylinder(r=1.65, h=20, center=true); 
+          }*/
+          
           // Easier ball driver access.
-          rotate([70, -25, 0])  cylinder(r=2.5, h=motor_frame_height);
+          rotate([75, -25, 0])  cylinder(r=3, h=motor_frame_height);
         }
       }
     }
@@ -43,7 +49,7 @@ module frame_motor() {
 }
 
 
-translate([0, 0, extrusion*2.5/2]) frame_motor();
+translate([0, 0, motor_frame_height/2]) frame_motor();
 //translate([0, 0, extrusion*2.5/2]) import("../kossel-master/BOM_tight/frame_motor.stl");
 //add fins to the sides
 
