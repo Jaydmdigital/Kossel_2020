@@ -6,10 +6,11 @@ use <nema17.scad>;
 $fn = 280;
 
 fin_w=5;
-fin_d=4;
-fins=1;
+fin_d=4;  // 5x4 for the vertical extrusion fins
+fins=1;   // Yes use fins
 
 motor_frame_height = 2.5*extrusion;
+motor_z_offset = 1.5; // use 1.5 for 40mm height
 
 module frame_motor() {
   difference() {
@@ -26,7 +27,7 @@ module frame_motor() {
       translate([-6-3, 0, 0]) cylinder(r=3.5, h=40);
       translate([-11, 0, 0])  cube([15, 5.2, 15], center=true);
     }
-    translate([0, motor_offset, 0]) {
+    translate([0, motor_offset, motor_z_offset]) {
       // Motor shaft/pulley cutout.
       rotate([90, 0, 0]) cylinder(r=12, h=20, center=true);
       // NEMA 17 stepper motor mounting screws.
@@ -44,7 +45,7 @@ module frame_motor() {
         }
       }
     }
-    translate([0, motor_offset, 0]) rotate([90, 0, 0]) % nema17();
+    translate([0, motor_offset, motor_z_offset]) rotate([90, 0, 0]) % nema17();
   }
 }
 
